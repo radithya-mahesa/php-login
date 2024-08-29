@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #254336;
+}
+
+.jumbotron {
+    max-width: fit-content;
+    margin: 10vh auto 10vh auto;
+    color: #DAD3BE;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.container button {
+    width: 130px;
+    height: 110px;
+
+    background-color: #6B8A7A;
+    border-radius: 10px;
+
+    color: #B7B597; 
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 470;
+    border-radius: 3px;
+    border: 2px solid #B7B597;
+    padding: 1rem 2rem;
+    box-shadow: 
+        .9px 1px 0 0 #B7B597, 
+        1.5px 2px 0 0 #B7B597, 
+        2.5px 3px 0 0 #B7B597, 
+        3.5px 4px 0 0 #B7B597, 
+        4.5px 5px 0 0 #B7B597, 
+        5.5px 6px 0 0 #B7B597, 
+        6.5px 7px 0 0 #B7B597, 
+        7.5px 8px 0 0 #B7B597, 
+        8.5px 9px 0 0 #B7B597, 
+        9.5px 10px 0 0 #B7B597; 
+    position: relative;
+    inset: 0;
+    cursor: pointer;
+    transform: rotateX(0), rotateY(0) rotateZ(0);
+    display: inline-block;
+    outline: 2px dashed transparent;
+    transition: all 600ms ease;
+}
+
+.container button:hover{
+    color: #B7B597; 
+    inset: 6px 0 5.5px 0;
+    transform: rotateX(5deg) rotateY(3deg) rotateZ(.25deg);
+    box-shadow: none;
+}
+
+
+.container a {
+    color: #DAD3BE;
+    text-decoration: none;
+}
