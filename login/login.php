@@ -9,7 +9,7 @@
     if (isset($_POST['login'])) {
         $username = $_POST['username'];
         $password = $_POST['password'];
-        $hash_password = hash('md5', $password);
+        $hash_password = hash('sha256', $password);
     
         $sql = "SELECT * FROM tbuser WHERE username='$username' AND 
         password='$hash_password'";
