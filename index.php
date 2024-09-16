@@ -7,7 +7,7 @@
     <title>RRRRRRADIT🦅🔥</title>
 </head>
 <body>
-    <?php include_once "layout/build/header.html" ?>
+    <?php include_once __DIR__ . "/layout/build/header.html" ?>
     <div class="jumbotron">
         <h1>SELAMAT DATANG DI WEBSITE SIGMA</h1>
     </div>
@@ -20,6 +20,6 @@
         </button>
     </div>
     <h5>klik terus kalo susah masuk</h5>
-    <?php include_once "layout/build/footer.html" ?>
+    <?php include_once __DIR__ . "/layout/build/footer.html" ?>
 </body>
 </html>
