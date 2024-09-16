@@ -69,3 +69,12 @@ body {
     color: #DAD3BE;
     text-decoration: none;
 }
+
+h5 {
+    margin-top: 3vh;
+
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    color: #DAD3BE;
+}
