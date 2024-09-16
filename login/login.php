@@ -21,7 +21,7 @@
             $_SESSION["username"] = $data["username"];
             $_SESSION["is_login"] = true;
             echo "<script>alert('HORE HORE KAMU BERHASIL LOGIN😹')</script>";
-            header("location: /php-login/login/dashboard/dashboard.php");
+            header("location: /php-logi-sigma/login/dashboard/dashboard.php");
         } else {
             echo "<script>alert('LMAO PASSWORD SALAH😹😹😹')</script>";
         }
