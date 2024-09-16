@@ -8,7 +8,7 @@
     }
 
     if (!isset($_SESSION['username'])) {
-        header('Location: http://localhost/php-login/login/dashboard/not-login/not-login.html');
+        header('Location: http://localhost/php-login/login/dashboard/not-login/not-login.php');
         exit();
     }
 ?>
