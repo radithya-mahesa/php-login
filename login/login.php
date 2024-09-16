@@ -1,9 +1,9 @@
 <?php
-    include_once "../config/koneksi.php";
+    include_once __DIR__ . "/../config/koneksi.php";
     session_start();
 
     if(isset($_SESSION["is_login"])) {
-        header("location: http://localhost/php-login/login/dashboard/dashboard.php");
+        header("location: /php-login/login/dashboard/dashboard.php");
     }
 
     if (isset($_POST['login'])) {
@@ -14,7 +14,6 @@
         $sql = "SELECT * FROM tbuser WHERE username='$username' AND 
         password='$hash_password'";
     
-    
         $result = $conn->query($sql);
     
         if ($result->num_rows > 0) {
@@ -22,7 +21,7 @@
             $_SESSION["username"] = $data["username"];
             $_SESSION["is_login"] = true;
             echo "<script>alert('HORE HORE KAMU BERHASIL LOGIN😹')</script>";
-            header("location: http://localhost/php-login/login/dashboard/dashboard.php");
+            header("location: /php-login/login/dashboard/dashboard.php");
         } else {
             echo "<script>alert('LMAO PASSWORD SALAH😹😹😹')</script>";
         }
@@ -35,11 +34,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Radit Sigma</title>
-    <?php include_once "../config/bootstrap.html" ?>
+    <?php include_once __DIR__ . "/../config/bootstrap.html" ?>
     <style>p { color: #000; }</style>
 </head>
 <body>
-    <?php include_once "../layout/build/header.html" ?>
+    <?php include_once __DIR__ . "/../layout/build/header.html" ?>
     <div class="container">
         <h2>LOGIN SIGMA</h2>
         <form name="register-login" action="login.php" method="POST">
@@ -59,6 +58,6 @@
             <a href="../index.php">Balik lagi ke home😹</a>
         </button>
     </div>
-    <?php include_once "../layout/build/footer.html" ?>
+    <?php include_once __DIR__ . "/../layout/build/footer.html" ?>
 </body>
 </html>
