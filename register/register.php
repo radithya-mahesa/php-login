@@ -1,16 +1,16 @@
 <?php
-include_once "../config/koneksi.php";
+include_once __DIR__ . "/../config/koneksi.php";
 session_start();
 
 if (isset($_SESSION["is_login"])) {
-    header("location: dashboard/dashboard.php");
+    header("location: /dashboard/dashboard.php");
 }
 
 if (isset($_POST['register'])) {
     $username = $_POST['username'];
     $nama = $_POST['nama'];
     $password = $_POST['password'];
-    $hash_password = hash('md5', $password);
+    $hash_password = hash('sha256', $password);
 
 
     $sql = "INSERT INTO tbuser (username, nama, password) VALUES 
@@ -34,12 +34,12 @@ if (isset($_POST['register'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php include_once "../config/bootstrap.html" ?>
+    <?php include_once __DIR__ . "/../config/bootstrap.html" ?>
     <title>Document</title>
     <style>p{ color: black; }</style>
 </head>
 <body>
-<?php include_once "../layout/build/header.html" ?>
+<?php include_once __DIR__ . "/../layout/build/header.html" ?>
     <div class="container">
         <h2>Register Sigma</h2>
         <form name="register-login" action="register.php" method="POST">
@@ -64,7 +64,7 @@ if (isset($_POST['register'])) {
             <a href="../index.php">Balik lagi ke home😹</a>
         </button>
     </div>
-    <?php include_once "../layout/build/footer.html" ?>
+    <?php include_once __DIR__ . "/../layout/build/footer.html" ?>
 </body>
 
 </html>
